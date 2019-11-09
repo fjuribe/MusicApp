@@ -6,6 +6,9 @@ import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
 import { ArtistaComponent } from './components/artista/artista.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
+import { RouteRoutingModule } from './route-routing.module';
+
+
 
 @NgModule({
   declarations: [
@@ -16,7 +19,8 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
     NavbarComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouteRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
