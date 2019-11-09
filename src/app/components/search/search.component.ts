@@ -16,8 +16,8 @@ buscar(termino:string){
 
    this.spotify.getArtista(termino)
        .subscribe((data:any)=>{
-   	     console.log(data.artists.items);
-   	     this.artistas=data.artists.items;
+   	     console.log(data);
+   	     this.artistas=data;
    })
 }
 }
