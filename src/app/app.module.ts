@@ -7,6 +7,11 @@ import { SearchComponent } from './components/search/search.component';
 import { ArtistaComponent } from './components/artista/artista.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { RouteRoutingModule } from './route-routing.module';
+import  {HttpClientModule} from '@angular/common/http';
+
+
+//services
+import  {SpotifyService} from './services/spotify.service';
 
 
 
@@ -20,9 +25,10 @@ import { RouteRoutingModule } from './route-routing.module';
   ],
   imports: [
     BrowserModule,
-    RouteRoutingModule
+    RouteRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [SpotifyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
