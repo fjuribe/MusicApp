@@ -17,6 +17,8 @@ import  {SpotifyService} from './services/spotify.service';
 //pipes
 import { NoimagePipe } from './pipes/noimage.pipe';
 import { TarjetasComponent } from './components/tarjetas/tarjetas.component';
+import { LondingComponent } from './components/shared/londing/londing.component';
+
 
 
 
@@ -28,7 +30,8 @@ import { TarjetasComponent } from './components/tarjetas/tarjetas.component';
     ArtistaComponent,
     NavbarComponent,
     NoimagePipe,
-    TarjetasComponent
+    TarjetasComponent,
+    LondingComponent
   ],
   imports: [
     BrowserModule,
