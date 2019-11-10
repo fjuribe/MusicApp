@@ -1,6 +1,8 @@
+
 <div class="row">
 	<div class="col">
 		<input type="text" name="buscar" (keyup)="buscar(termino.value)" class="form-control" placeholder="Buscar artista" #termino>
 	</div>
 </div>
-<app-tarjetas [items]="artistas"></app-tarjetas>
+<app-londing *ngIf="loanding"></app-londing>
+<app-tarjetas *ngIf="!loanding" [items]="artistas"></app-tarjetas>
