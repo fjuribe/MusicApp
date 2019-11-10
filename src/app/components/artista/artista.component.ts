@@ -10,12 +10,14 @@ import {SpotifyService} from '../../services/spotify.service';
 export class ArtistaComponent{
 artista:any[]=[];
 esperarartista:boolean;
+topTracks:any[]=[];
 
   constructor(private router:ActivatedRoute,private spotify:SpotifyService) { 
 
       this.esperarartista=true;
       this.router.params.subscribe( params => {
         this.getArtista(params['id']);
+        this.getTopTracks(params['id']);
         //this.esperarartista=false;
      });
 
@@ -31,4 +33,16 @@ esperarartista:boolean;
               this.esperarartista=false;
        });
     }
+
+     getTopTracks(id:string){
+       
+       this.spotify.getTopTracks(id)
+           .subscribe(topTracks=>{
+           	  console.log(topTracks);
+           	  this.topTracks=topTracks;
+           });
+                 // .pipe(map(data=>{
+                 //     return data.artists.items;
+                  // }));
+     } 
 }
